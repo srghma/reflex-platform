@@ -20,26 +20,29 @@ result
 *.log
 .DS_Store
 
+# haskell-overlays/
+
 # Hide any files in hack-on/off quasi-submodules
-# nixpkgs/*
+# haskell-overlays/reflex-packages/dep/nixpkgs/*
 # !nixpkgs/default.nix
 # !nixpkgs/github.json
-# reflex/*
-# !reflex/default.nix
+# haskell-overlays/reflex-packages/dep/reflex/*
+# !haskell-overlays/reflex-packages/dep/reflex/default.nix
 # !reflex/github.json
-# jsaddle/*
+# haskell-overlays/reflex-packages/dep/jsaddle/*
 # !jsaddle/default.nix
 # !jsaddle/github.json
-# jsaddle-dom/*
+# haskell-overlays/reflex-packages/dep/jsaddle-dom/*
 # !jsaddle-dom/default.nix
 # !jsaddle-dom/github.json
-# ghcjs-dom/*
+# haskell-overlays/reflex-packages/dep/ghcjs-dom/*
 # !ghcjs-dom/default.nix
 # !ghcjs-dom/github.json
-# reflex-dom/*
+# haskell-overlays/reflex-packages/dep/reflex-dom/*
 # !reflex-dom/default.nix
 # !reflex-dom/github.json
-# reflex-todomvc/*
+# haskell-overlays/reflex-packages/dep/reflex-todomvc/*
 # !reflex-todomvc/default.nix
 # !reflex-todomvc/github.json
-# /dist-newstyle/
+
+/dist-newstyle/

@@ -1,0 +1,23 @@
+-- Without `cabal.project` (the content of `hie.yaml` doesnt matter) the `haskell-language-server-wrapper -d src/Data/Some/Universe/Orphans.hs`
+-- will throw
+--
+-- Failed to parse result of calling cabal
+--
+-- cabal: Internal error in target matching. It should always be possible to find
+-- a syntax that's sufficiently qualified to give an unambiguous match. However
+-- when matching 'lib:dependent-sum-universe-orphans' we found
+-- lib:dependent-sum-universe-orphans (unknown-component) which does not have an
+-- unambiguous syntax. The possible syntax and the targets they match are as
+-- follows:
+-- 'lib:dependent-sum-universe-orphans' which matches
+-- lib:dependent-sum-universe-orphans (unknown-component),
+-- :pkg:lib:lib:lib:file:dependent-sum-universe-orphans (unknown-file)
+
+packages: ./
+
+-- fixes error on cabal install
+-- Configuring semigroupoids-5.3.4...
+-- setup: Encountered missing dependencies:
+-- doctest >=0.11.1 && <0.18
+package semigroupoids
+  flags: -doctests

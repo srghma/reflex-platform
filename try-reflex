@@ -25,7 +25,7 @@ fi
 echo "Entering the reflex sandbox..."
 
 # This must be built first, so that the ghcjs.reflex-todomvc built below is built in parallel with everything else
-prebuild_try_reflex_shell
+# prebuild_try_reflex_shell
 
 SUGGESTION_GHC=$(cat <<EOF
 To run a simple app:

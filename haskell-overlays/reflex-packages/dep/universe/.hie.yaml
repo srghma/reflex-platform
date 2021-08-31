@@ -1,0 +1,28 @@
+cradle:
+  cabal:
+    - path: "deprecated/universe-instances-base/src"
+      component: "lib:universe-instances-base"
+
+    - path: "deprecated/universe-instances-trans/src"
+      component: "lib:universe-instances-trans"
+
+    - path: "universe/src"
+      component: "lib:universe"
+
+    - path: "universe-base/src"
+      component: "lib:universe-base"
+
+    - path: "universe-base/tests"
+      component: "universe-base:test:tests"
+
+    - path: "universe-dependent-sum/src"
+      component: "lib:universe-dependent-sum"
+
+    - path: "universe-dependent-sum/test"
+      component: "universe-dependent-sum:test:th-test"
+
+    - path: "universe-instances-extended/src"
+      component: "lib:universe-instances-extended"
+
+    - path: "universe-reverse-instances/src"
+      component: "lib:universe-reverse-instances"

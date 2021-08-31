@@ -1,22 +1,59 @@
 flags: -overloaded-methods -overloaded-signals -overloaded-properties
+-- compiler: ghc
+
+packages:
+  ./examples/WorkOnTest
+  ./haskell-overlays/reflex-packages/dep/universe/universe-dependent-sum
+  ./haskell-overlays/reflex-packages/dep/universe/universe
+  ./haskell-overlays/reflex-packages/dep/universe/deprecated/universe-instances-trans
+  ./haskell-overlays/reflex-packages/dep/universe/deprecated/universe-instances-base
+  ./haskell-overlays/reflex-packages/dep/universe/universe-instances-extended
+  ./haskell-overlays/reflex-packages/dep/universe/universe-base
+  ./haskell-overlays/reflex-packages/dep/universe/universe-reverse-instances
+  ./haskell-overlays/reflex-packages/dep/dependent-sum-universe-orphans
+  ./haskell-overlays/reflex-packages/dep/reflex
+  ./haskell-overlays/reflex-packages/dep/patch
+  -- ./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/wxHello
+  -- ./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/wxHello-cpp
+  -- ./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/gtkHello
+  -- ./haskell-overlays/reflex-packages/dep/cabal-macosx
+  ./haskell-overlays/reflex-packages/dep/jsaddle-dom
+  ./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom
+  ./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core
+  ./haskell-overlays/reflex-packages/dep/reflex-dom/chrome-test-utils
+  ./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom
+  ./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom-jsffi
+  ./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom-jsaddle
+  ./haskell-overlays/reflex-packages/dep/reflex-todomvc
+  -- ./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-connect
+  ./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-nix
+  ./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle
+  ./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql
+  -- ./haskell-overlays/reflex-packages/dep/reflex-aeson-orphans
+  -- ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-webkitgtk
+  ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-warp
+  -- ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-wkwebview
+  ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-clib
+  -- ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-webkit2gtk
+  ./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle
 
 optional-packages: *
 
 -- Needed for ios
--- package reflex
---  flags: -use-template-haskell
--- package reflex-dom-core
---  flags: -use-template-haskell
--- package wai-websockets
---  flags: -example
--- package semigroupoids
---  flags: -doctests
--- package text
---  flags: +integer-simple
--- package scientific
---  flags: +integer-simple
--- package hashable
---  flags: -integer-gmp
+package reflex
+ flags: -use-template-haskell
+package reflex-dom-core
+ flags: -use-template-haskell
+package wai-websockets
+ flags: -example
+package semigroupoids
+ flags: -doctests
+package text
+ flags: +integer-simple
+package scientific
+ flags: +integer-simple
+package hashable
+ flags: -integer-gmp
 package gi-atk
  flags: -overloaded-methods -overloaded-signals -overloaded-properties
 package gi-cairo

@@ -1,0 +1,280 @@
+cradle:
+  cabal:
+    # - path: "examples/WorkOnTest/Main.hs"
+    #   component: "WorkOnTest:exe:WorkOnTest"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/"
+    #   component: "lib:cabal-macosx"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/macosx-app.hs"
+    #   component: "cabal-macosx:exe:macosx-app"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/."
+    #   component: "cabal-macosx:test:tests"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/tests"
+    #   component: "cabal-macosx:test:tests"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/gtkHello/src/Main.hs"
+    #   component: "gtkHello:exe:GtkHello"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/wxHello/src/Main.hs"
+    #   component: "wxHello:exe:WxHello"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/cabal-macosx/examples/wxHello-cpp/src/Main.hs"
+    #   component: "wxHello:exe:WxHello"
+
+    - path: "./haskell-overlays/reflex-packages/dep/dependent-sum-universe-orphans/src"
+      component: "lib:dependent-sum-universe-orphans"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle/src"
+    #   component: "lib:gargoyle"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql/src"
+    #   component: "lib:gargoyle-postgresql"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql/src-bin/gargoyle-psql.hs"
+    #   component: "gargoyle-postgresql:exe:gargoyle-psql"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql/src-bin/gargoyle-pg-run.hs"
+    #   component: "gargoyle-postgresql:exe:gargoyle-pg-run"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql/src-bin/gargoyle-postgres-monitor.hs"
+    #   component: "gargoyle-postgresql:exe:gargoyle-postgres-monitor"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql/tests"
+    #   component: "gargoyle-postgresql:test:gargoyle-psql-test"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-connect/src"
+    #   component: "lib:gargoyle-postgresql-connect"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-nix/src"
+    #   component: "lib:gargoyle-postgresql-nix"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-nix/src-bin/gargoyle-nix-psql.hs"
+    #   component: "gargoyle-postgresql-nix:exe:gargoyle-nix-psql"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-nix/src-bin/gargoyle-nix-pg-run.hs"
+    #   component: "gargoyle-postgresql-nix:exe:gargoyle-nix-pg-run"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/gargoyle/gargoyle-postgresql-nix/src-bin/gargoyle-nix-postgres-monitor.hs"
+    #   component: "gargoyle-postgresql-nix:exe:gargoyle-nix-postgres-monitor"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom/src"
+    #   component: "lib:ghcjs-dom"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom-jsaddle/"
+    #   component: "lib:ghcjs-dom-jsaddle"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/ghcjs-dom/ghcjs-dom-jsffi/src"
+    #   component: "lib:ghcjs-dom-jsffi"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle/src-ghc"
+    #   component: "lib:jsaddle"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle/src"
+    #   component: "lib:jsaddle"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-clib/src"
+    #   component: "lib:jsaddle-clib"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-clib/src-ghcjs"
+    #   component: "lib:jsaddle-clib"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-clib/src-ghc"
+    #   component: "lib:jsaddle-clib"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-warp/src"
+    #   component: "lib:jsaddle-warp"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-warp/tests"
+    #   component: "jsaddle-warp:test:test-tool"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-webkit2gtk/src"
+    #   component: "lib:jsaddle-webkit2gtk"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-webkitgtk/src"
+    #   component: "lib:jsaddle-webkitgtk"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-wkwebview/src"
+    #   component: "lib:jsaddle-wkwebview"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-wkwebview/src-ghcjs"
+    #   component: "lib:jsaddle-wkwebview"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle/jsaddle-wkwebview/src-ghc"
+    #   component: "lib:jsaddle-wkwebview"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/jsaddle-dom/src"
+    #   component: "lib:jsaddle-dom"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/src"
+    #   component: "lib:reflex"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:semantics"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:CrossImpl"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:hlint"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:EventWriterT"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:DebugCycles"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:RequesterT"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:Headless"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:Adjustable"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:QueryT"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:GC-Semantics"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test"
+    #   component: "reflex:test:rootCleanup"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Main.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Main.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/TestPlan.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/Plan/Reflex.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/Bench/Focused.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/TestPlan.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/Plan/Reflex.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/Bench/Focused.hs"
+    #   component: "reflex:bench:spider-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/RunAll.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/RunAll.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/TestPlan.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/Plan/Reflex.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/bench/Reflex/Bench/Focused.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/TestPlan.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/Plan/Reflex.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex/test/Reflex/Bench/Focused.hs"
+    #   component: "reflex:bench:saulzar-bench"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-aeson-orphans/src"
+    #   component: "lib:reflex-aeson-orphans"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/chrome-test-utils/src"
+    #   component: "lib:chrome-test-utils"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src"
+    #   component: "lib:reflex-dom"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src-android"
+    #   component: "lib:reflex-dom"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/examples/sortableList.hs"
+    #   component: "reflex-dom:exe:sortableList"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/benchmark.hs"
+    #   component: "reflex-dom:exe:benchmark"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/benchmarks/krausest.hs"
+    #   component: "reflex-dom:exe:krausest"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/src"
+    #   component: "lib:reflex-dom-core"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/src-ghc"
+    #   component: "lib:reflex-dom-core"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/src-ghcjs"
+    #   component: "lib:reflex-dom-core"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/src-ghc"
+    #   component: "lib:reflex-dom-core"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/test"
+    #   component: "reflex-dom-core:test:hlint"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/test"
+    #   component: "reflex-dom-core:test:hydration"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom-core/test"
+    #   component: "reflex-dom-core:test:gc"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src-bin/bench.hs"
+    #   component: "reflex-todomvc:bench:bench-builder-all"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src"
+    #   component: "lib:reflex-todomvc"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src-bin/main.hs"
+    #   component: "reflex-todomvc:exe:reflex-todomvc"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src-bin/warp.hs"
+    #   component: "reflex-todomvc:exe:reflex-todomvc-warp"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src-bin/webkitgtk.hs"
+    #   component: "reflex-todomvc:exe:reflex-todomvc-webkitgtk"
+
+    # - path: "./haskell-overlays/reflex-packages/dep/reflex-todomvc/src-bin/wkwebview.hs"
+    #   component: "reflex-todomvc:exe:reflex-todomvc-wkwebview"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/deprecated/universe-instances-base/src"
+      component: "lib:universe-instances-base"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/deprecated/universe-instances-trans/src"
+      component: "lib:universe-instances-trans"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe/src"
+      component: "lib:universe"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-base/src"
+      component: "lib:universe-base"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-base/tests"
+      component: "universe-base:test:tests"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-dependent-sum/src"
+      component: "lib:universe-dependent-sum"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-dependent-sum/test"
+      component: "universe-dependent-sum:test:th-test"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-instances-extended/src"
+      component: "lib:universe-instances-extended"
+
+    - path: "./haskell-overlays/reflex-packages/dep/universe/universe-reverse-instances/src"
+      component: "lib:universe-reverse-instances"
