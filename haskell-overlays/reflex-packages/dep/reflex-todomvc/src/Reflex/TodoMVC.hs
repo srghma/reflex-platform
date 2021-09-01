@@ -4,7 +4,7 @@
 {-# LANGUAGE RecursiveDo #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TemplateHaskell #-}
-{-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE TypeFamilies, PartialTypeSignatures #-}
 module Reflex.TodoMVC where
 
 import Prelude hiding (mapM, mapM_, sequence)
@@ -66,7 +66,7 @@ satisfiesFilter f = case f of
 --------------------------------------------------------------------------------
 
 main :: JSM ()
-main = mainWidgetWithCss $(embedFile "style.css") todoMVC
+main = mainWidgetWithCss "" todoMVC
 
 todoMVC
   :: ( DomBuilder t m
@@ -79,7 +79,7 @@ todoMVC
 todoMVC = el "div" $ do
   elAttr "section" ("class" =: "todoapp") $ do
     mainHeader
-    rec tasks <- foldDyn ($) initialTasks $ mergeWith (.)
+    rec tasks <- (foldDyn) ($) initialTasks $ mergeWith (.)
                    [ fmap insertNew_ newTask
                    , listModifyTasks
                    , fmap (const $ Map.filter $ not . taskCompleted) clearCompleted -- Call out the type and purpose of these things
@@ -115,7 +115,7 @@ taskEntry
   => m (Event t Task)
 taskEntry = el "header" $ do
   -- Create the textbox; it will be cleared whenever the user presses enter
-  rec let newValueEntered = keypress Enter descriptionBox
+  rec let newValueEntered = (keypress) Enter descriptionBox
       descriptionBox <- inputElement $ def
         & inputElementConfig_setValue .~ fmap (const "") newValueEntered
         & inputElementConfig_elementConfig . elementConfig_initialAttributes .~

@@ -1,0 +1,16 @@
+haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src/Reflex/Dom/Internal.hs:101:35: error:
+    • Found type wildcard ‘_’ standing for ‘JSM () -> IO ()’
+      To use the inferred type, enable PartialTypeSignatures
+    • In an expression type signature: _
+      In the expression: (run :: _)
+      In the expression: (run :: _) $ Main.mainWidgetWithCss css w
+    • Relevant bindings include
+        w :: forall x. Widget x ()
+          (bound at haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src/Reflex/Dom/Internal.hs:101:23)
+        css :: ByteString
+          (bound at haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src/Reflex/Dom/Internal.hs:101:19)
+        mainWidgetWithCss :: ByteString -> (forall x. Widget x ()) -> IO ()
+          (bound at haskell-overlays/reflex-packages/dep/reflex-dom/reflex-dom/src/Reflex/Dom/Internal.hs:101:1)
+    |
+101 | mainWidgetWithCss css w = (run :: _) $ Main.mainWidgetWithCss css w
+    |                                   ^

@@ -14,7 +14,7 @@
 , haskellOverlaysPre ? []
 , haskellOverlaysPost ? haskellOverlays
 , hideDeprecated ? false # The moral equivalent of "-Wcompat -Werror" for using reflex-platform.
-, hlsSupport ? false
+, hlsSupport ? true
 }:
 let iosSupport = system == "x86_64-darwin";
     androidSupport = lib.elem system [ "x86_64-linux" ];
@@ -62,6 +62,7 @@ let iosSupport = system == "x86_64-darwin";
       haskell = super.haskell // {
         overlays = super.haskell.overlays or {} // import ./haskell-overlays {
           nixpkgs = self;
+          # !!!!!!!!!!!
           inherit (self) lib;
           haskellLib = self.haskell.lib;
           inherit
@@ -413,11 +414,28 @@ in let this = rec {
       nodejs
       pkgconfig
       closurecompiler
+      binutils # Fix: cabal: The program 'ar' is required but it could not be found.
       ;
   } // lib.optionalAttrs hlsSupport {
-    haskell-language-server = nixpkgs.haskell.lib.justStaticExecutables (nativeHaskellPackages.override {
-      overrides = nixpkgs.haskell.overlays.haskell-language-server;
-    }).haskell-language-server;
+    haskell-language-server = (
+      let
+        inherit (nixpkgs) callPackage fetchFromGitHub mkShell;
+        easy-hls-src = fetchFromGitHub {
+          owner  = "jkachmar";
+          repo   = "easy-hls-nix";
+          rev    = "6cb50f04e3a61b1ec258c6849df84dae9dfd763f";
+          sha256 = "1rvi6067nw64dka8kksl7f34pwkq7wx7pnhnz3y261fw9z5j4ndp";
+        };
+        easy-hls = callPackage easy-hls-src {
+          ghcVersions = [ "8.6.5" ];
+        };
+      in
+        easy-hls
+    );
+
+    # haskell-language-server = nixpkgs.haskell.lib.justStaticExecutables (nativeHaskellPackages.override {
+    #   overrides = nixpkgs.haskell.overlays.haskell-language-server;
+    # }).haskell-language-server;
   };
 
   workOn = haskellPackages: package: (overrideCabal package (drv: {
