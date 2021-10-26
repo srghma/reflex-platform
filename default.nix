@@ -471,12 +471,13 @@ in let this = rec {
 
   reflexEnv = platform:
     let haskellPackages = builtins.getAttr platform this;
-        ghcWithStuff = if platform == "ghc" || platform == "ghcjs"
-                       then haskellPackages.ghcWithHoogle
+        ghcWithStuff =  if platform == "ghc" || platform == "ghcjs"
+                       then nixpkgs.lib.traceValSeqN 2 haskellPackages.ghcWithHoogle
                        else haskellPackages.ghcWithPackages;
     in ghcWithStuff (p: import ./packages.nix {
       haskellPackages = p;
       inherit platform;
+      pkgs = nixpkgs;
     });
 
   tryReflexPackages = builtins.attrValues (generalDevTools' {})

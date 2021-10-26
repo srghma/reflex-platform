@@ -161,6 +161,8 @@ let
       reflex-dom = if useWarp && (with self.ghc.stdenv; hostPlatform == targetPlatform) && !(self.ghc.isGhcjs or false)
         then nixpkgs.haskell.lib.addBuildDepend (nixpkgs.haskell.lib.enableCabalFlag super.reflex-dom "use-warp") self.jsaddle-warp
         else super.reflex-dom;
+
+      # http-conduit = self.callHackageDirect { pkg = "http-conduit"; ver = "2.3.8"; sha256 = "sha256:0jbv4k5imhgj4givwcraqmi81ssq40gw3cd9kkpvsy724p9j9g72"; } {};
     })
     overrides
   ];

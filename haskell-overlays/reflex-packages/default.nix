@@ -184,7 +184,7 @@ in
   dependent-sum = self.callHackage "dependent-sum" "0.7.1.0" {};
   dependent-sum-template = self.callHackage "dependent-sum-template" "0.1.0.3" {};
   dependent-sum-universe-orphans = self.callCabal2nix "dependent-sum-universe-orphans" self._dep.dependent-sum-universe-orphans {};
-  dependent-sum-aeson-orphans = self.callHackage "dependent-sum-aeson-orphans" "0.3.0.0" {};
+  dependent-sum-aeson-orphans = self.callHackage "dependent-sum-aeson-orphans" "0.3.1.0" {};
 
   # Need to use `--subpath` because LICENSE in each dir is a symlink to the repo root.
   universe = self.callCabal2nixWithOptions "universe" universeRepo "--subpath universe" {};
@@ -197,4 +197,9 @@ in
   # Needed to fix cross compilation from macOS to elsewhere
   # https://github.com/danfran/cabal-macosx/pull/14
   cabal-macosx = self.callCabal2nix "cabal-macosx" self._dep.cabal-macosx {};
+
+  http-conduit = self.callHackage "http-conduit" "2.3.7" {};
+  # http-conduit = self.callHackageDirect { pkg = "http-conduit"; ver = "2.3.8"; sha256 = "sha256:0jbv4k5imhgj4givwcraqmi81ssq40gw3cd9kkpvsy724p9j9g72"; } {};
+
+  # async = self.callHackage "async" "2.2.2" {};
 }

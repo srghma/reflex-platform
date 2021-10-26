@@ -16,6 +16,7 @@ in
 rec {
   optionalExtension = cond: overlay: if cond then overlay else _: _: {};
 
+  # [8 6] "8.6.5"
   versionWildcard = versionList: let
     versionListInc = lib.init versionList ++ [ (lib.last versionList + 1) ];
     bottom = lib.concatStringsSep "." (map toString versionList);
@@ -98,7 +99,9 @@ rec {
   };
 
   # For GHC and GHCJS
-  any = _: _: {};
+  any = self: super: {
+    # http-conduit = self.callHackageDirect { pkg = "http-conduit"; ver = "2.3.8"; sha256 = "sha256:0jbv4k5imhgj4givwcraqmi81ssq40gw3cd9kkpvsy724p9j9g72"; } {};
+  };
   any-8 = import ./any-8.nix { inherit haskellLib lib getGhcVersion; };
   any-8_6 = import ./any-8.6.nix { inherit haskellLib fetchFromGitHub; inherit (nixpkgs) pkgs; };
   any-head = import ./any-head.nix { inherit haskellLib fetchFromGitHub; };
